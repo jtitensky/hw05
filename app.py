@@ -37,6 +37,7 @@ def b():
     #return render_template("result.html", yesno="failure")
 
     if lr=="register":
+        #register
         c=open("data/up.csv")
         combos=csv.reader(c)
         for i in combos:
@@ -51,6 +52,7 @@ def b():
         fd.close()
         return render_template("home.html", x="account created")
     if lr=="login":
+        #login
         combos=csv.reader(open("data/up.csv"))
         for i in combos:
             if un==i[0]:
